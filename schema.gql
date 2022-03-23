@@ -1,0 +1,28 @@
+# schema.graphql
+type Recipe {
+  id: Int!
+  title: String!
+  imageUrl: String
+}
+
+type Secret {
+  id: Int!
+  superDuperHyperCredential: String!
+}
+
+type User {
+  id: Int!
+  name: String!
+  email: String! @authz(rules: [IsAdmin])
+}
+
+type Query {
+  recipe(id: Int!): Recipe!
+  secret(id: Int!): Secret! @authz(rules: [IsAuthenticated])
+  user(id: Int!): User! @authz(rules: [IsAuthenticated])
+}
+
+enum AuthZRules {
+  IsAuthenticated
+  IsAdmin
+}
