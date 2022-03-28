@@ -29,7 +29,4 @@ async function graphql(): Promise<Middleware> {
     return graphqlHTTP({ schema, graphiql: true });
 }
 
-
-
-
 main();

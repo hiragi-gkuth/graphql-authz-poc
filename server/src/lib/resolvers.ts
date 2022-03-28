@@ -5,13 +5,13 @@ const users = [
         id: 1,
         name: "hiragi-gkuth",
         email: "hiragi-gkuth@hiragi.guru",
-        role: "admin",
+        role: "Admin",
     },
     {
         id: 2,
         name: "kaede-jifnh",
         email: "kaede-jifnh@hiragi.guru",
-        role: "user",
+        role: "User",
     },
 ];
 
@@ -39,5 +39,3 @@ export const resolvers: Resolvers = {
         } 
     }
 }
-
-const IsAuthenticated = preExecRule
